@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 require_once 'user.php';
+require_once 'product.php';
 
 
 /*
@@ -18,7 +19,7 @@ require_once 'user.php';
 
 //Connection with the file Welcome.blade.php  --homepage--
 Route::get('/', function () {
-    $data = new User('Edo','Ragazzi',0);
+    $data = new User('Edo','Ragazzi', 0 , 70);
     //return view('welcome');
     //return view('welcome', ['data' => $data ]);
     //return view('welcome', compact( 'data') );
@@ -27,12 +28,13 @@ Route::get('/', function () {
 
 
 Route::get('/user', function () {
-    $data = new User('Edo','Ragazzi',0);
+    $data = new User('Edo','Ragazzi', 0 , 50 );
     return view('user')->with('utente', $data );
 })->name('userpage');
 
 Route::get('/product', function () {
-    return view('product');
+    $data = new Product('https://source.unsplash.com/random', 'Playstation' , 300 , 'console game' );
+    return view('product')->with('product', $data);
 })->name('productpage');
 
 
