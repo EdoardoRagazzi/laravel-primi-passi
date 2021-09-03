@@ -13,6 +13,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//Connection with the file Welcome.blade.php  --homepage--
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('homepage');
+
+
+Route::get('/user', function () {
+    return view('user');
+})->name('userpage');
+
+Route::get('/product', function () {
+    return view('product');
+})->name('productpage');
+

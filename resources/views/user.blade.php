@@ -71,33 +71,17 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
+         
 
             <div class="content">
-                <ul class="nav justify-content-center">
-                    <li class="nav-item">
-                      <a class="nav-link  text-uppercase " aria-current="page" href="{{route('homepage')}}"><span>Homepage</span> </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link text-uppercase" href="{{route('userpage')}}"> <span>User</span> </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link text-uppercase" href="{{route('productpage')}}"> <span>Product</span></a>
-                    </li>
-                   
-                </ul>
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">User</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
 
             </div>
         </div>
