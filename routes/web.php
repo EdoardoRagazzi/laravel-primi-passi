@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
+require_once 'user.php';
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,15 +18,21 @@ use Illuminate\Support\Facades\Route;
 
 //Connection with the file Welcome.blade.php  --homepage--
 Route::get('/', function () {
-    return view('welcome');
+    $data = new User('Edo','Ragazzi',0);
+    //return view('welcome');
+    //return view('welcome', ['data' => $data ]);
+    //return view('welcome', compact( 'data') );
+    return view('welcome')->with('utente', $data );
 })->name('homepage');
 
 
 Route::get('/user', function () {
-    return view('user');
+    $data = new User('Edo','Ragazzi',0);
+    return view('user')->with('utente', $data );
 })->name('userpage');
 
 Route::get('/product', function () {
     return view('product');
 })->name('productpage');
+
 

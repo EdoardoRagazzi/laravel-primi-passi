@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -84,14 +86,14 @@
                     @endauth
                 </div>
             @endif
-
+            
             <div class="content">
                 <ul class="nav justify-content-center">
                     <li class="nav-item">
                       <a class="nav-link  text-uppercase " aria-current="page" href="{{route('homepage')}}"><span>Homepage</span> </a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link text-uppercase" href="{{route('userpage')}}"> <span>User</span> </a>
+                      <a class="nav-link text-uppercase" href="{{route('userpage')}}"> <span> User </span> </a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link text-uppercase" href="{{route('productpage')}}"> <span>Product</span></a>
